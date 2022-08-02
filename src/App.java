@@ -1,10 +1,13 @@
 import java.util.Scanner;
 
 public class App {
+    
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-
+        
+        
+        while (true) {
         System.out.println("Please enter the price in dollars and cents $$.cc");
 
         while (!input.hasNextDouble()) {
@@ -26,6 +29,8 @@ public class App {
 
         System.out.println("the average price is " + result/nums.length);
         System.out.println("the total price is " + result);
+        System.out.println();
 
     }
+  }
 }

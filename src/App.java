@@ -24,7 +24,7 @@ public class App {
         int count = nums.length;
         for (double i: nums) result += i;
 
-        System.out.println("the average price is " + result/(nums.length));
+        System.out.println("the average price is " + result/nums.length);
         System.out.println("the total price is " + result);
 
     }

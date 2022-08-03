@@ -1,12 +1,17 @@
+
+import com.logic.SimpleImageLoad;
+import java.awt.*;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
+
 public class App {
     static Scanner input = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         while (true) {
 
@@ -36,6 +41,7 @@ public class App {
                 count = 0;
             }
 
+
             if (price <= 0) {
                 count = 1;
             }
@@ -43,6 +49,16 @@ public class App {
             if (price2 <= 0) {
                 count = 1;
             }
+
+
+            if (price <= 0) {
+                count = 1;
+            }
+
+            if (price2 <= 0) {
+                count = 1;
+            }
+
 
             System.out.println("Please enter your name");
             String string = input.next();
@@ -69,6 +85,15 @@ public class App {
             hm.put(string, value + count);
 
             System.out.println(string + " you bought " + hm.get(string) + " items.\n");
+
+            //Adds an image that displays for 8 seconds
+            SimpleImageLoad appwin = new SimpleImageLoad();
+            appwin.setSize(new Dimension(1, 1));
+            appwin.setTitle("SimpleImageLoad");
+            appwin.setVisible(true);
+            Thread.sleep(8000);
+            appwin.setVisible(false);
+
         }
     }
 }
